@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "../pages/Blog/Blog";
-import CourseCard from "../pages/CourseCard/CourseCard";
-import Courses from "../pages/Courses/Courses";
+import Category from "../pages/Category/Category";
+
 import Faq from "../pages/FAQ/Faq";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import News from "../pages/News/News";
 import Register from "../pages/Register/Register";
 import CourseList from "../pages/Shared/CourseList/CourseList";
 
@@ -40,13 +41,13 @@ element:<CourseList></CourseList>
 
 {
 path:'/courses/:id',
-element:<Courses></Courses>
+element:<Category></Category>
 
 },
 {
 
     path:'/cards/:id',
-    element:<CourseCard></CourseCard>
+    element:<News></News>
 
 
 },

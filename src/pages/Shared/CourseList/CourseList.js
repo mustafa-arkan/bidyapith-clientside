@@ -1,21 +1,22 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
-import CourseCard from '../../CourseCard/CourseCard';
-import Courses from '../../Courses/Courses';
+
+import Leftside from '../Leftside/Leftside';
+import Rightside from '../Rightside/Rightside';
 
 const CourseList = () => {
     return (
         <div>
             
-<Courses></Courses>
+
 
 <Container>
 
 <Row>
 
 <Col lg="2" className='d-none d-lg-block'>
-  <h2>Leftside</h2>
+<Leftside></Leftside>
 </Col>
 
 <Col lg="7">
@@ -31,7 +32,7 @@ const CourseList = () => {
 <Col lg="3">
 
 
-<CourseCard></CourseCard>
+<Rightside></Rightside>
 
 </Col>
 
