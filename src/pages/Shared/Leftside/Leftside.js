@@ -33,7 +33,7 @@ fetch('http://localhost:5000/news-categories')
 categories.map(category=><p key={category.id}>
 
 
-<Link to={`/news/${category.id}`}>{category.name}</Link>
+<Link to={`/category/${category.id}`}>{category.name}</Link>
 
 
 

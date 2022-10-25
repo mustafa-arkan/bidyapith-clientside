@@ -40,9 +40,12 @@ element:<CourseList></CourseList>
 
 
 {
-path:'/courses/:id',
+path:'/category/:id',
 element:<Category></Category>,
-loader:({params})=>fetch(`http://localhost:5000/news/${params.id}`)
+loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+
+
+
 
 },
 {
