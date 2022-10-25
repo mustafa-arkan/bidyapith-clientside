@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Category = () => {
 
     
@@ -7,7 +8,7 @@ const Category = () => {
         <div>
             
 
-
+<h2>this has </h2>
 
 
 
