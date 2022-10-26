@@ -65,11 +65,17 @@ console.log(user)
 
     return (
         <div>
-            <h2>this is register page</h2>
-            <Form className='container w-50' onSubmit={handleSubmit}>
+            <h3 className='text-center text-danger'>Register Now.</h3>
+            <Form className='container w-50 border rounded' onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Full Name</Form.Label>
         <Form.Control  name='name' type="text" placeholder="Enter your full name." />
+        
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Photo Url</Form.Label>
+        <Form.Control  name='name' type="text" placeholder="Enter your photo url." />
         
       </Form.Group>
 

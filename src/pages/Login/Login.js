@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/UserContext';
 
 const Login = () => {
 
-    const {signIn}=useContext(AuthContext)
+    const {signIn,signInWithGoogle}=useContext(AuthContext)
     //const navigate=useNavigate()
     const navigate=useNavigate()
 
@@ -41,10 +41,27 @@ const Login = () => {
     
     }
 
+
+    const handleGoogleSignIn=()=>{
+
+      signInWithGoogle()
+      .then(result=>{
+      
+      const user=result.user
+      
+      console.log(user)
+      
+      })
+      .catch(error=>console.error(error))
+      
+      
+      }
+
+
     return (
         <div>
-<h3 className='text-center'>Please Login Now!!</h3>
-<Form className='container w-50' onSubmit={handleSubmit}>
+<h3 className='text-center text-success'>Please Login Now!!</h3>
+<Form className='container w-50 border rounded' onSubmit={handleSubmit}>
            
 
 
@@ -60,13 +77,25 @@ const Login = () => {
       </Form.Group>
       <div>
 
-      <Link to="/"><button type="button" class="btn btn-link">Forget your password?</button></Link>
+      <Link to="/register"><button type="button" class="btn btn-link">Have you register?</button></Link>
       
       
       </div>
       <Button variant="primary" type="submit"  >
        Login
       </Button>
+
+
+
+      <div>
+
+      <button  onClick={handleGoogleSignIn}   type="button" className="mt-3 btn btn-secondary btn-lg">Login with Google</button>
+
+      </div>
+
+
+      
+      
     </Form>
 
 
