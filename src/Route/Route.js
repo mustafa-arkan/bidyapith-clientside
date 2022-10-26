@@ -11,6 +11,7 @@ import Register from "../pages/Register/Register";
 import Checkout from "../pages/Shared/Checkout/Checkout";
 
 import CourseList from "../pages/Shared/CourseList/CourseList";
+import PrivateRoutes from "../routes/PrivateRoutes";
 
 
 
@@ -52,7 +53,7 @@ element:<CourseList></CourseList>
 
 {
 path:'/category/:id',
-element:<Category></Category>,
+element:<PrivateRoutes><Category></Category></PrivateRoutes>,
 loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
 
 

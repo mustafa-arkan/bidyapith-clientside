@@ -1,10 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import Button from 'react-bootstrap/Button';
 
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../context/UserContext';
+
 
 
 
@@ -14,12 +18,25 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
 
+const {user,logOut}=useContext(AuthContext)
 
 
+const handleSignout=()=>{
+
+  logOut()
+  
+  .then(()=>{})
+  
+  .catch(error=>console.error(error))
+  
+  
+  
+      
+  }
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <Navbar.Brand href=""><Link to='/'>Bidyapith Academy</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -33,10 +50,35 @@ const Header = () => {
           <Nav>
 
 
+{user ?. email && <span>Welcome,{user.email}</span>}
+<Link to="/login"><Button variant="">Login</Button></Link>
 
-          <Nav.Link href="#features"><Link to='/login'>Login</Link></Nav.Link>
-          <Nav.Link href="#features"><Link to='/register'>Register</Link></Nav.Link>
+          <Link to="/register"><Button variant="">Register</Button></Link>
+
+
+
+           {
+
+user ?.email ?
+<Button onClick={handleSignout} variant="">Logout</Button>
+
+: <Link to="/login">
+
+<Button className='btn btn-small'>Login</Button>
+
+</Link>
+
+
+           }
+
+
+
+
           </Nav>
+
+
+
+
 <div>
 
 
