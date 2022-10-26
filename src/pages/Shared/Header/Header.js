@@ -1,9 +1,11 @@
 import React from 'react';
 
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -29,6 +31,9 @@ const Header = () => {
             
           </Nav>
           <Nav>
+
+
+
           <Nav.Link href="#features"><Link to='/login'>Login</Link></Nav.Link>
           <Nav.Link href="#features"><Link to='/register'>Register</Link></Nav.Link>
           </Nav>

@@ -3,11 +3,13 @@ import { useLoaderData } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import CourseCard from '../Shared/CourseCard/CourseCard'
 
+
 const Category = () => {
     
     <Header></Header>
 
     const allNews=useLoaderData()
+    
     return (
         <div>
             
@@ -29,6 +31,14 @@ news={news}
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

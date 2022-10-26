@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
-const CourseCard = ({news}) => {
+const CourseCard = ({news,checkout}) => {
     return (
         <div className='' >
             <h3 className='fst-italic container'>{news.title} is our most demanding course.Most of our student liked this course.It's a job focused basic to advanced {news.name} course.</h3>
@@ -14,7 +15,7 @@ const CourseCard = ({news}) => {
         <Card.Title>{news.title}</Card.Title>
         
       </Card.Body>
-      
+
       
       <Card.Body>
       {news.details}
@@ -37,8 +38,8 @@ const CourseCard = ({news}) => {
 
 </div>
 
-
-      <Button className='w-50 ms-3 mb-2' variant="warning">Get Premium Access</Button>
+{/* <Button className='w-50' variant="warning"><Link to='checkout'  >get</Link></Button> */}
+      <Button className='w-50 ms-3 mb-2' variant="warning"><Link to='checkout'>Get Premium Access</Link></Button>
     </Card>
         </div>
     );

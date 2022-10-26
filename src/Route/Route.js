@@ -8,6 +8,8 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import News from "../pages/News/News";
 import Register from "../pages/Register/Register";
+import Checkout from "../pages/Shared/Checkout/Checkout";
+
 import CourseList from "../pages/Shared/CourseList/CourseList";
 
 
@@ -35,6 +37,15 @@ element:<CourseList></CourseList>
 
 
 },
+
+
+{ 
+    path:'/checkout',
+ element:<Checkout></Checkout>
+// loader:({params})=>fetch(`http://localhost:5000/checkout/${params.id}`)
+
+
+ },
 
 
 
