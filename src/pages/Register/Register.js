@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { useState } from 'react';
+
 import { useContext } from 'react';
 
 import Button from 'react-bootstrap/Button';
@@ -9,32 +12,60 @@ import { AuthContext } from '../../context/UserContext';
 
 const Register = () => {
 
+  const [passwordError,setPasswordError]=useState('')
+  const[success,setSuccess]=useState(false)
+  
 const {createUser,signInWithGoogle,signInWithGit}=useContext(AuthContext)
 //const {createUser,signInWithGoogle}=useContext(AuthContext)
+
+
+
+
+
     const handleSubmit=event=>{
 
         event.preventDefault()
-    
+        setSuccess(false)  
         const form=event.target
         
         const name=form.name.value
         const email=form.email.value 
         const password=form.password.value 
         console.log(name,email,password)
+
+
+        if(!/(?=.*[A-Z].*[A-Z])/.test(password)){
+
+          setPasswordError('Please provide atleast two uppercase character')
+          return
+          
+          }
+    if(password.length<8){
+    
+      setPasswordError('Please provide 8 char')
+    
+      return
+    }
+    setPasswordError('')
+
+
     
     createUser(email,password)
     .then(result=>{
     
     const user=result.user
+    setSuccess(true)
+
     console.log('registered user:', user)
+    form.reset()
     
     
     })
     
     .catch(error=>{
     
-    console.error(error)
-    
+      console.error('error:',error)
+    setPasswordError(error.message)
     
     
     })
@@ -105,6 +136,7 @@ const handleGitSignIn=()=>{
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control  name='password' type="password" placeholder="Password" />
+        <p className='text-danger'>{passwordError}</p>
       </Form.Group>
       <div>
 
