@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/UserContext';
 
 const Login = () => {
 
-    const {signIn,signInWithGoogle}=useContext(AuthContext)
+    const {signIn,signInWithGoogle,signInWithGit}=useContext(AuthContext)
     //const navigate=useNavigate()
     const navigate=useNavigate()
 
@@ -57,6 +57,26 @@ const Login = () => {
       
       }
 
+const handleGitSignIn=()=>{
+
+  signInWithGit()
+  signInWithGoogle()
+      .then(result=>{
+      
+      const user=result.user
+      
+      console.log(user)
+      
+      })
+      .catch(error=>console.error(error))
+
+
+
+
+}
+
+
+
 
     return (
         <div>
@@ -90,6 +110,8 @@ const Login = () => {
       <div>
 
       <button  onClick={handleGoogleSignIn}   type="button" className="mt-3 btn btn-secondary btn-lg">Login with Google</button>
+
+      <button  onClick={handleGitSignIn}   type="button" className="mt-3 btn btn-secondary btn-lg ms-3">Login with Git</button>
 
       </div>
 

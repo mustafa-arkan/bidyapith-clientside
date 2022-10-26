@@ -9,7 +9,7 @@ import { AuthContext } from '../../context/UserContext';
 
 const Register = () => {
 
-const {createUser,signInWithGoogle}=useContext(AuthContext)
+const {createUser,signInWithGoogle,signInWithGit}=useContext(AuthContext)
 //const {createUser,signInWithGoogle}=useContext(AuthContext)
     const handleSubmit=event=>{
 
@@ -58,7 +58,23 @@ console.log(user)
 
 }
 
+const handleGitSignIn=()=>{
 
+  signInWithGit()
+  signInWithGoogle()
+      .then(result=>{
+      
+      const user=result.user
+      
+      console.log(user)
+      
+      })
+      .catch(error=>console.error(error))
+
+
+
+
+}
 
 
 
@@ -103,6 +119,8 @@ console.log(user)
       <div>
 
       <button  onClick={handleGoogleSignIn}   type="button" className="mt-3 btn btn-secondary btn-lg">Register with Google</button>
+
+      <button  onClick={handleGitSignIn}   type="button" className="mt-3 btn btn-secondary btn-lg ms-3">Login with Git</button>
       </div>
      
     </Form>
