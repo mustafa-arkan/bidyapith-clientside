@@ -50,6 +50,7 @@ const handleSignout=()=>{
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           {/* <Nav.Link href="#features"><Link to='/courselist'>Courses</Link></Nav.Link> */}
+          <Link to="/"><Button  className='fw-bolder'  variant="">Home</Button></Link>
           <Link to="/courselist"><Button  className='fw-bolder'  variant="">Courses</Button></Link>
           <Link to="/faq"><Button   className='fw-bolder' variant="">FAQ</Button></Link>
             {/* <Nav.Link href="#features"><Link to='/faq'>FAQ</Link></Nav.Link> */}

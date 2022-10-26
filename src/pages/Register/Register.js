@@ -137,6 +137,7 @@ const handleGitSignIn=()=>{
         <Form.Label>Password</Form.Label>
         <Form.Control  name='password' type="password" placeholder="Password" />
         <p className='text-danger'>{passwordError}</p>
+        {success && <p className="text-success">User created successfully</p>}
       </Form.Group>
       <div>
 
