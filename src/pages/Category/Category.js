@@ -12,7 +12,7 @@ const Category = () => {
         <div>
             
 
-<h2>this has: {allNews.length} </h2>
+{/* <h2>this has: {allNews.length} </h2> */}
 {
 
 allNews.map(news=><CourseCard

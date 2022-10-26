@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const Leftside = () => {
 
@@ -23,17 +24,20 @@ fetch('http://localhost:5000/news-categories')
     return (
 
 
-        <div>
-            <h2>left side:{categories.length}</h2>
+        <div >
+            {/* <h2>left side:{categories.length}</h2> */}
 
-<div>
+<div >
 
 {
 
-categories.map(category=><p key={category.id}>
+categories.map(category=><p className='mb-3 mt-3' key={category.id}>
 
 
-<Link to={`/category/${category.id}`}>{category.name}</Link>
+
+<Button className='w-50' variant="warning"><Link to={`/category/${category.id}`}>{category.name}</Link></Button>
+
+{/* <Link to={`/category/${category.id}`}>{category.name}</Link> */}
 
 
 

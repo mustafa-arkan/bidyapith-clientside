@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+
 
 import Leftside from '../Leftside/Leftside';
 import Rightside from '../Rightside/Rightside';
@@ -15,21 +15,21 @@ const CourseList = () => {
 
 <Row>
 
-<Col lg="2" className='d-none d-lg-block'>
+<Col lg="3" className='d-none d-lg-block'>
 <Leftside></Leftside>
 </Col>
 
-<Col lg="7">
+{/* <Col lg="1">
 
 <Outlet></Outlet>
 
 
-</Col>
+</Col> */}
 
 
 
 
-<Col lg="3">
+<Col lg="9">
 
 
 <Rightside></Rightside>
