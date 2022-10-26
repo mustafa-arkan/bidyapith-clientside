@@ -93,7 +93,8 @@ path:'/register',
 element:<Register></Register>
 
 
-}
+},
+
 
 
 
@@ -105,7 +106,7 @@ element:<Register></Register>
 
 
 
-}
+},
 
 
 
@@ -115,7 +116,7 @@ element:<Register></Register>
 
 
 
-
+{path:'*',element:<div className='align-items-center text-center'>404....Page not found!!!!</div>}
 
 
 ])
