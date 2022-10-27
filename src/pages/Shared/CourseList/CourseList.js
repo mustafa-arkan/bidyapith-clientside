@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import Footer from '../../footer/Footer';
 
 
 import Leftside from '../Leftside/Leftside';
@@ -15,7 +16,7 @@ const CourseList = () => {
 
 <Row>
 
-<Col lg="3" className='d-none d-lg-block'>
+<Col lg="3" className=''>
 <Leftside></Leftside>
 </Col>
 
@@ -45,7 +46,7 @@ const CourseList = () => {
 
 
 
-
+<Footer></Footer>
 
 
             

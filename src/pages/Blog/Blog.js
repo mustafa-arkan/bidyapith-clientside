@@ -52,6 +52,12 @@ const Blog = () => {
         </Card.Footer>
       </Card>
     </CardGroup>
+
+
+
+
+
+    
     <Card className='m-2 mb-5'>
         <Card.Img variant="top" src="https://res.cloudinary.com/practicaldev/image/fetch/s--sbmJX9BV--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d2kflp5t0kl302gfq567.jpg" className='w-100 h-75' />
         <Card.Body>

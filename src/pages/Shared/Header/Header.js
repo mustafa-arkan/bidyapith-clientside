@@ -39,7 +39,7 @@ const handleSignout=()=>{
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='container'>
       <Container>
       <span className='fs-2 fst-italic fw-bolder me-2 text-danger border rounded-circle border-warning'>B</span>
         {/* <Navbar.Brand href=""><Link to='/'>Bidyapith Academy</Link></Navbar.Brand> */}

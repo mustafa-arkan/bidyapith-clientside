@@ -51,6 +51,17 @@ element:<CourseList></CourseList>
 
 
 
+
+
+
+
+
+
+
+
+
+ 
+
 {
 path:'/category/:id',
 element:<PrivateRoutes><Category></Category></PrivateRoutes>,
