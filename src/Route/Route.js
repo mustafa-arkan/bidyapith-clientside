@@ -43,7 +43,7 @@ element:<CourseList></CourseList>
 { 
     path:'/checkout',
  element:<Checkout></Checkout>
-// loader:({params})=>fetch(`http://localhost:5000/checkout/${params.id}`)
+// loader:({params})=>fetch(`https://bidyapith-server.vercel.app/checkout/${params.id}`)
 
 
  },
@@ -55,7 +55,7 @@ element:<CourseList></CourseList>
 {
 path:'/category/:id',
 element:<PrivateRoutes><Category></Category></PrivateRoutes>,
-loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+loader:({params})=>fetch(`https://bidyapith-server.vercel.app/category/${params.id}`)
 
 
 

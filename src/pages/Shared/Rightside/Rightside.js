@@ -13,7 +13,7 @@ const Rightside = () => {
 const [rights,setRights]=useState([])
 useEffect(()=>{
 
-    fetch('http://localhost:5000/news-categories')
+    fetch('https://bidyapith-server.vercel.app/news-categories')
     .then(res=>res.json())
     .then(data=>setRights(data))
     
