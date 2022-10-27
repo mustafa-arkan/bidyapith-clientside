@@ -61,7 +61,13 @@ const handleSignout=()=>{
           <Nav>
 
 
-{user ?. email && <span>Welcome,{user.email}</span>}
+{user ?. email && <span>Welcome,{user.email}</span>} 
+
+
+
+
+
+{/* <img src={user.photoURL} alt="" className="src" /> */}
 
 
 {/* <BsToggleOn></BsToggleOn> */}

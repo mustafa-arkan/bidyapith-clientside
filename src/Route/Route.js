@@ -50,16 +50,6 @@ element:<CourseList></CourseList>
 
 
 
-
-
-
-
-
-
-
-
-
-
  
 
 {
@@ -108,22 +98,11 @@ element:<Register></Register>
 
 
 
-
-
-
-
-
 ]
 
 
 
 },
-
-
-
-
-
-
 
 
 
