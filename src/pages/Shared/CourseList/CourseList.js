@@ -22,7 +22,7 @@ const CourseList = () => {
 
 {/* <Col lg="1">
 
-<Outlet></Outlet>
+
 
 
 </Col> */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
@@ -8,13 +8,15 @@ import { jsPDF } from "jspdf";
 
 const CourseCard = ({news,checkout}) => {
 
+
+
 const handlePdf=()=>{
 
   const doc=new jsPDF("landscape",'px','a4','false')
 
 // doc.addImage(logoo,'PNG',65,20,500,400)
 
-doc.text(120,40,'We have more than 1000 videos on 6 topics.Learner can easily learn programming and take them into working environment.here we offer Js ,react,react native,python,mongo db.In near future we would offer more job focused course.')
+//doc.text(120,40,'We have more than 1000 videos on 6 topics.Learner can easily learn programming and take them into working environment.here we offer Js ,react,react native,python,mongo db.In near future we would offer more job focused course.')
 
 
 
@@ -66,8 +68,16 @@ doc.save('a.pdf')
 
 </div>
 
-{/* <Button className='w-50' variant="warning"><Link to='checkout'  >get</Link></Button> */}
-      <Button className='w-50 ms-3 mb-2' variant="warning"><Link to='checkout'>Get Premium Access</Link></Button>
+<Button className='w-50' variant="warning"><Link to='/checkout'  >Get Premium</Link></Button> 
+      
+
+
+
+      
+
+
+
+
     </Card>
         </div>
     );
